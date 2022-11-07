@@ -92,3 +92,49 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+nx serve host --open --devRemotes=catalog-team,logistic-team
+
+- o objetivo - o que queremos
+- comeca por onde?
+- problemas, ameacas
+- tobe, fortalezas(solucao)
+- como fazemos?
+- intuito
+- objetivo
+- onde quer ir?
+- dores
+
+O que temos hoje?
+mostrar atualmente como eh nossa arquitetura de front-end
+nx graph
+
+Objetivo: Migrar a tecnologia de front-end do anymarket para uma arquitetura escalavel, separada por dominios dos times do any.
+
+Comeca por onde?
+Atacando modulos de funcionalidades especificas de um determinado dominio e iniciar a reescrita da feature na nova tecnologia.
+Ex: O dominio catalogo, tem a feature vinculo de categorias, dai comecaria por essa feature a migracao na nova arquitetura.
+
+Quais problemas temos hoje?
+1. Esforco alto para qualquer modificacao
+2. Tecnologia depreciada
+3. Segregacao de dominio e funcionalidades
+4. Nao tem teste unitario
+5. Nao tem teste de automacao/integracao
+6. Nao tem acessibilidade
+7. Nao tem boa usabilidade
+8. Duas pessoas apenas atuando como dev front-end
+9. Falta de documentacao
+10. Falta de padronizacao da base de codigo
+
+
+Quais ameacas temos hoje?
+1. vulnerabilidade de seguranca
+2. Devs angularJS no mercado
+3. Limitacao de recursos tecnicos
+4. Falta de mao de obra
+5. Equipe desmotivada por trabalhar com tecnologias obsoletas
+
+Quais oportunidades teremos?
+
+Solucao?

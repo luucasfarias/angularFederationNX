@@ -1,0 +1,158 @@
+{
+  "values": [
+    {
+        "id": 1752513,
+        "parent": null,
+        "idInClient": "16",
+        "priceFactor": 1,
+        "realPriceFactor": 1,
+        "name": "Acessórios",
+        "childCount": 1,
+        "path": "Acessórios",
+        "autMarketplaces": null,
+        "definitionPriceScope": "COST",
+        "codeInMarketplace": null,
+        "totalProducts": 2,
+        "children": [
+          {
+            "autMarketplaces": null,
+            "childCount": 0,
+            "children": [],
+            "codeInMarketplace": null,
+            "definitionPriceScope": "COST",
+            "id": 1780200,
+            "idInClient": null,
+            "name": "Acessorios 2",
+            "parent": 1752513,
+            "path": "Acessórios/Acessorios 2",
+            "priceFactor": 1,
+            "realPriceFactor": 1,
+            "totalProducts": 1
+          }
+        ]
+    },
+    {
+      "id": 1702437,
+      "parent": null,
+      "idInClient": null,
+      "priceFactor": 1,
+      "realPriceFactor": 1,
+      "name": "Andadores y Caminadores",
+      "childCount": 1,
+      "path": "Andadores y Caminadores",
+      "autMarketplaces": null,
+      "definitionPriceScope": "COST",
+      "codeInMarketplace": null,
+      "totalProducts": 3,
+      "children": [
+        {
+          "autMarketplaces": null,
+          "childCount": 0,
+          "children": [],
+          "codeInMarketplace": null,
+          "definitionPriceScope": "COST",
+          "id": 1780200,
+          "idInClient": null,
+          "name": "Acessorios 2",
+          "parent": 1752513,
+          "path": "Acessórios/Acessorios 2",
+          "priceFactor": 1,
+          "realPriceFactor": 1,
+          "totalProducts": 1
+        }
+      ]
+    },
+    {
+      "id": 1752503,
+      "parent": null,
+      "idInClient": "89",
+      "priceFactor": 1,
+      "realPriceFactor": 1,
+      "name": "Anymarket",
+      "childCount": 1,
+      "path": "Anymarket",
+      "autMarketplaces": null,
+      "definitionPriceScope": "COST",
+      "codeInMarketplace": null,
+      "totalProducts": 3,
+      "children": [
+        {
+          "autMarketplaces": null,
+          "childCount": 0,
+          "children": [],
+          "codeInMarketplace": null,
+          "definitionPriceScope": "COST",
+          "id": 1780200,
+          "idInClient": null,
+          "name": "Acessorios 2",
+          "parent": 1752513,
+          "path": "Acessórios/Acessorios 2",
+          "priceFactor": 1,
+          "realPriceFactor": 1,
+          "totalProducts": 1
+        }
+      ]
+    },
+    {
+      "id": 1300567,
+      "parent": null,
+      "idInClient": null,
+      "priceFactor": 1,
+      "realPriceFactor": 1,
+      "name": "APAGAR",
+      "childCount": 2,
+      "path": "APAGAR",
+      "autMarketplaces": null,
+      "definitionPriceScope": "COST",
+      "codeInMarketplace": null,
+      "totalProducts": 6,
+      "children": []
+    },
+    {
+      "id": 1752495,
+      "parent": null,
+      "idInClient": "8",
+      "priceFactor": 1,
+      "realPriceFactor": 1,
+      "name": "Ar Condicionado Janela",
+      "childCount": 1,
+      "path": "Ar Condicionado Janela",
+      "autMarketplaces": null,
+      "definitionPriceScope": "COST",
+      "codeInMarketplace": null,
+      "totalProducts": 2,
+      "children": []
+    },
+    {
+      "id": 1752516,
+      "parent": null,
+      "idInClient": "11",
+      "priceFactor": 1,
+      "realPriceFactor": 1,
+      "name": "Ar Condicionado Premium",
+      "childCount": 1,
+      "path": "Ar Condicionado Premium",
+      "autMarketplaces": null,
+      "definitionPriceScope": "COST",
+      "codeInMarketplace": null,
+      "totalProducts": 2,
+      "children": [
+        {
+          "autMarketplaces": null,
+          "childCount": 0,
+          "children": [],
+          "codeInMarketplace": null,
+          "definitionPriceScope": "COST",
+          "id": 1780200,
+          "idInClient": null,
+          "name": "Acessorios 2",
+          "parent": 1752513,
+          "path": "Acessórios/Acessorios 2",
+          "priceFactor": 1,
+          "realPriceFactor": 1,
+          "totalProducts": 1
+        }
+      ]
+    }
+  ]
+}

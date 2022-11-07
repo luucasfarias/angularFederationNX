@@ -1,0 +1,119 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/logistic-team/src",
+  "prefix": "anymarket-frontend",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/logistic-team",
+        "index": "apps/logistic-team/src/index.html",
+        "main": "apps/logistic-team/src/main.ts",
+        "polyfills": "apps/logistic-team/src/polyfills.ts",
+        "tsConfig": "apps/logistic-team/tsconfig.app.json",
+        "inlineStyleLanguage": "sass",
+        "assets": [
+          "apps/logistic-team/src/favicon.ico",
+          "apps/logistic-team/src/assets"
+        ],
+        "styles": ["apps/logistic-team/src/styles.sass"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/logistic-team/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/logistic-team/src/environments/environment.ts",
+              "with": "apps/logistic-team/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/logistic-team/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "logistic-team:build:production"
+        },
+        "development": {
+          "browserTarget": "logistic-team:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4202,
+        "publicHost": "http://localhost:4202"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "logistic-team:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/logistic-team/**/*.ts",
+          "apps/logistic-team/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/logistic-team"],
+      "options": {
+        "jestConfig": "apps/logistic-team/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "logistic-team:build",
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "logistic-team:build:development"
+        },
+        "production": {
+          "buildTarget": "logistic-team:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,119 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/catalog-team/src",
+  "prefix": "anymarket-frontend",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/catalog-team",
+        "index": "apps/catalog-team/src/index.html",
+        "main": "apps/catalog-team/src/main.ts",
+        "polyfills": "apps/catalog-team/src/polyfills.ts",
+        "tsConfig": "apps/catalog-team/tsconfig.app.json",
+        "inlineStyleLanguage": "sass",
+        "assets": [
+          "apps/catalog-team/src/favicon.ico",
+          "apps/catalog-team/src/assets"
+        ],
+        "styles": ["apps/catalog-team/src/styles.sass"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/catalog-team/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/catalog-team/src/environments/environment.ts",
+              "with": "apps/catalog-team/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/catalog-team/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "catalog-team:build:production"
+        },
+        "development": {
+          "browserTarget": "catalog-team:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4201,
+        "publicHost": "http://localhost:4201"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "catalog-team:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/catalog-team/**/*.ts",
+          "apps/catalog-team/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/catalog-team"],
+      "options": {
+        "jestConfig": "apps/catalog-team/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "catalog-team:build",
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "catalog-team:build:development"
+        },
+        "production": {
+          "buildTarget": "catalog-team:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

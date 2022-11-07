@@ -1,5 +1,14 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "catalog-team": "apps/catalog-team",
+    "catalog-team-e2e": "apps/catalog-team/e2e",
+    "host": "apps/host",
+    "host-e2e": "apps/host/e2e",
+    "logistic-team": "apps/logistic-team",
+    "logistic-team-e2e": "apps/logistic-team/e2e",
+    "shared": "libs/shared",
+    "ui": "libs/ui"
+  }
 }
